@@ -1,0 +1,113 @@
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace; /* Gunakan font pixel jika ada */
+}
+
+.gameboy-body {
+    background-color: #cfcfcf;
+    padding: 30px;
+    border-radius: 10px 10px 50px 10px;
+    box-shadow: 10px 10px 0px #888;
+    width: 320px;
+}
+
+.screen-container {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#screen-content {
+    background-color: #9bbc0f; /* Warna hijau GameBoy */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 3px solid #0f380f;
+    padding: 10px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #0f380f;
+    color: #9bbc0f;
+    border: none;
+    padding: 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #306230;
+}
+/* Tampilan layar dalam (Warna Hijau Retro) */
+.screen-content {
+    background-color: #9bbc0f;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #0f380f;
+    box-sizing: border-box;
+}
+
+/* Container Progress Bar */
+.loading-container {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.loading-text {
+    font-size: 10px;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #0f380f;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    border: 2px solid #0f380f;
+    padding: 2px;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #0f380f;
+    /* Kita akan kontrol transisi lewat JS atau CSS */
+}
+
+.status-text {
+    font-size: 10px;
+    text-align: right;
+    margin-top: 5px;
+}
+
+/* Efek teks berkedip */
+.blink-text {
+    animation: blink 1s infinite;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0f380f;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}               
